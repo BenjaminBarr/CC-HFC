@@ -12,7 +12,6 @@ library(emmeans)
 library(lme4)
 
 ## Read in Data
-
 g26 <- read.csv("./Data/CC&HFC Weekly Mass.csv")
 
 # Calculate weekly mean
