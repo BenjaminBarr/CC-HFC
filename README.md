@@ -1,5 +1,5 @@
 # CC-HFC - 
-  *HFC is a high fat casein diet, denoted such as a congruent study utilized another protein source.*
+  *HFC is a high fat casein diet, denoted as such to avoid confusion with a congruent study utilizing another protein source.*
     HFC == HF
 
 CC and High Fat Casein Diet for C3H/HeJ
