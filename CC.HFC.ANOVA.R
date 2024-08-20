@@ -111,19 +111,6 @@ c6.pairs_dt[, p_pretty := p_format(p_rounded,
                                    add.p = TRUE)]
 c6.pairs_dt
 
-# Assumptions and Residuals
-c6.lm_plot <- ggplot_the_model(
-  fit = c6.lm,
-  fit_emm = c6.em,
-  fit_pairs = c6.pairs,
-  palette = pal_okabe_ito_blue,
-  y_label = "Weight",
-  g_label = "sex",
-  dots = "jitter"
-  
-)
-c6.lm_plot
-
 # Graphing labels (group 2 = CC | group 6 = HFC, f = Female | m = Male)
 c6.em_dt$group <- c("group 2 f", "group 6 f", "group 2 m", "group 6 m")
 c6.pairs_dt$group1 <- c("group 6 f", "group 6 m", "group 2 m", "group 6 m")
@@ -167,19 +154,6 @@ c12.pairs <- contrast(c12.em,
 
 c12.pairs_dt <- data.table(c12.pairs)
 
-# Assumptions and Residuals
-c12.lm_plot <- ggplot_the_model(
-  fit = c12.lm,
-  fit_emm = c12.em,
-  fit_pairs = c12.pairs,
-  palette = pal_okabe_ito_blue,
-  y_label = "Weight",
-  g_label = "sex",
-  dots = "jitter"
-  
-)
-c12.lm_plot
-
 ###
 anova(c18.lm)
 
@@ -197,18 +171,6 @@ c18.pairs <- contrast(c18.em,
   summary(infer = T, )
 
 c18.pairs_dt <- data.table(c18.pairs)
-
-c18.lm_plot <- ggplot_the_model(
-  fit = c18.lm,
-  fit_emm = c18.em,
-  fit_pairs = c18.pairs,
-  palette = pal_okabe_ito_blue,
-  y_label = "Weight",
-  g_label = "sex",
-  dots = "jitter"
-  
-)
-c18.lm_plot
 
 ## ALL MASS ##
 c.em_dt <- rbind(c6.em_dt, c12.em_dt, c18.em_dt, fill = T)
@@ -300,19 +262,6 @@ cl6.pairs_dt[, p_pretty := p_format(p_rounded,
                                    add.p = TRUE)]
 cl6.pairs_dt
 
-# Assumptions and Residuals
-cl6.lm_plot <- ggplot_the_model(
-  fit = cl6.lm,
-  fit_emm = cl6.em,
-  fit_pairs = cl6.pairs,
-  palette = pal_okabe_ito_blue,
-  y_label = "Weight",
-  g_label = "sex",
-  dots = "jitter"
-  
-)
-cl6.lm_plot
-
 # Graphing labels (group 2 = CC | group 6 = HFC, f = Female | m = Male)
 cl6.em_dt$group <- c("group 2 f", "group 6 f", "group 2 m", "group 6 m")
 cl6.pairs_dt$group1 <- c("group 6 f", "group 6 m", "group 2 m", "group 6 m")
@@ -356,19 +305,6 @@ cl12.pairs <- contrast(c12.em,
 
 cl12.pairs_dt <- data.table(cl12.pairs)
 
-# Assumptions and Residuals
-cl12.lm_plot <- ggplot_the_model(
-  fit = cl12.lm,
-  fit_emm = cl12.em,
-  fit_pairs = cl12.pairs,
-  palette = pal_okabe_ito_blue,
-  y_label = "Weight",
-  g_label = "sex",
-  dots = "jitter"
-  
-)
-cl12.lm_plot
-
 ###
 anova(cl18.lm)
 
@@ -386,18 +322,6 @@ cl18.pairs <- contrast(cl18.em,
   summary(infer = T, )
 
 cl18.pairs_dt <- data.table(cl18.pairs)
-
-cl18.lm_plot <- ggplot_the_model(
-  fit = cl18.lm,
-  fit_emm = cl18.em,
-  fit_pairs = cl18.pairs,
-  palette = pal_okabe_ito_blue,
-  y_label = "Weight",
-  g_label = "sex",
-  dots = "jitter"
-  
-)
-cl18.lm_plot
 
 ## ALL LEAN MASS ##
 cl.em_dt <- rbind(cl6.em_dt, cl12.em_dt, cl18.em_dt, fill = T)
@@ -488,19 +412,6 @@ cf6.pairs_dt[, p_pretty := p_format(p_rounded,
                                     add.p = TRUE)]
 cf6.pairs_dt
 
-# Assumptions and Residuals
-cf6.lm_plot <- ggplot_the_model(
-  fit = cf6.lm,
-  fit_emm = cf6.em,
-  fit_pairs = cf6.pairs,
-  palette = pal_okabe_ito_blue,
-  y_label = "Weight",
-  g_label = "sex",
-  dots = "jitter"
-  
-)
-cf6.lm_plot
-
 # Graphing labels (group 2 = CC | group 6 = HFC, f = Female | m = Male)
 cf6.em_dt$group <- c("group 2 f", "group 6 f", "group 2 m", "group 6 m")
 cf6.pairs_dt$group1 <- c("group 6 f", "group 6 m", "group 2 m", "group 6 m")
@@ -544,19 +455,6 @@ cf12.pairs <- contrast(c12.em,
 
 cf12.pairs_dt <- data.table(cf12.pairs)
 
-# Assumptions and Residuals
-cf12.lm_plot <- ggplot_the_model(
-  fit = cf12.lm,
-  fit_emm = cf12.em,
-  fit_pairs = cf12.pairs,
-  palette = pal_okabe_ito_blue,
-  y_label = "Weight",
-  g_label = "sex",
-  dots = "jitter"
-  
-)
-cf12.lm_plot
-
 ###
 anova(cf18.lm)
 
@@ -574,18 +472,6 @@ cf18.pairs <- contrast(cf18.em,
   summary(infer = T, )
 
 cf18.pairs_dt <- data.table(cf18.pairs)
-
-cf18.lm_plot <- ggplot_the_model(
-  fit = cf18.lm,
-  fit_emm = cf18.em,
-  fit_pairs = cf18.pairs,
-  palette = pal_okabe_ito_blue,
-  y_label = "Weight",
-  g_label = "sex",
-  dots = "jitter"
-  
-)
-cf18.lm_plot
 
 ## ALL MASS ##
 cf.em_dt <- rbind(cf6.em_dt, cf12.em_dt, cf18.em_dt, fill = T)
@@ -652,7 +538,7 @@ all.em_dt$xlab <- as.factor(all.em_dt$xlab)
 is.numeric(all.em_dt$emmean)
 
 glab <- c(`group 2 f` = "CC Females", `group 2 m` = "CC Males", 
-          `group 6 f` = "HFC Females", `group 6 m` = "HFC Males")
+          `group 6 f` = "HF Females", `group 6 m` = "HF Males")
 
 names(glab) <-levels(all.em_dt$group)
 names(glab) <- as.factor(names(glab))
@@ -691,7 +577,7 @@ m.types <- ggplot(data = all.em_dt, aes(x = factor(xlab, levels = c("6 T", "6 L"
                    pattern_spacing = 0.05, # Set key density
                    pattern_density = .75, # Graph density
                    pattern_key_scale_factor = 0.3) +
-  scale_pattern_discrete(choices = c("none", "stripe", "circle"), name = "Diets:") +
+  scale_pattern_discrete(choices = c("none", "stripe", "circle"), name = element_blank()) +
   scale_pattern_spacing_discrete(range = c(0.01, 0.1)) +
   facet_wrap(~factor(group, levels = c("group 2 f", "group 6 f", 
                                        "group 2 m", "group 6 m")),
@@ -706,7 +592,7 @@ m.types <- ggplot(data = all.em_dt, aes(x = factor(xlab, levels = c("6 T", "6 L"
 
 m.types
 
-types = get_plot_component(last_plot(), "guide-box-top") #extract legend
+types = get_plot_component(last_plot(), "guide-box") #extract legend
 
 #No legend
 plt <- ggplot(data = all.em_dt, aes(x = factor(xlab, levels = c("6 T", "6 L", "6 F",
@@ -722,8 +608,8 @@ plt <- ggplot(data = all.em_dt, aes(x = factor(xlab, levels = c("6 T", "6 L", "6
   facet_wrap(~factor(group, levels = c("group 2 f", "group 6 f", 
                                        "group 2 m", "group 6 m")),
              labeller = as_labeller(glab)) +
-  scale_fill_manual(values = gcolor, name = "Diets", labels = c("CC Females", "CC Males", 
-                                                                "HFC Females", "HFC Males")) +
+  scale_fill_manual(values = gcolor, name = "Mass", labels = c("CC Females", "CC Males", 
+                                                               "HF Females", "HF Males")) +
   geom_errorbar(data = all.em_dt, aes(y = emmean, ymin = emmean - SE, ymax = emmean + SE, x = xlab), width = 0.1, color = "black") +
   scale_y_continuous(expand = c(0, 0),
                      limits = c(0, 52)) +

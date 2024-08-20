@@ -27,7 +27,7 @@ ggplot(data = g26, aes(week, weight, group = series, col = series)) +
   geom_point(data = g26.avg, aes(week, mean, group = series, col = series)) +
   scale_x_continuous(limits = c(0, 73),
                      breaks = c(4, 24, 48, 72)) +
-  scale_color_manual(label = c("CC Females", "CC Males", "HFC Females", "HFC Males"),
+  scale_color_manual(label = c("CC Females", "CC Males", "HF Females", "HF Males"),
                      values = c("brown1", "chartreuse4", "deepskyblue3", "darkgoldenrod1")) +
   labs(title = "Weekly Total Mass",
        y = "Median Mass (g)", x = "Week", color = "Diet") +
